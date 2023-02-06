@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import Navbar from "./scenes/Navbar";
 import Landing from "./scenes/Landing";
 import useMediaQuery from "./hooks/useMediaQuery";
-import DotGroup from "./scenes/DotGroup";
+import DotGroup from "./scenes/DotGroup"; 
+import LineGradient from "./components/LineGradient";
+import MySkills from "./scenes/MySkills";
+import Projects from "./scenes/Projects";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home")
@@ -33,6 +36,13 @@ function App() {
           />
         )}
         <Landing setSelectedPage={setSelectedPage}/>
+      </div>
+      <LineGradient/>
+      <div className="w-5/6 mx-auto md:h-full">
+        <MySkills/>
+      </div>
+      <div className="w-5/6 mx-auto md:h-full">
+        <Projects/>
       </div>
     </div>
   );
